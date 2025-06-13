@@ -91,8 +91,8 @@ class RecipeController extends AbstractController
    
 
        'user'=> [
-          "firstname"=>"Zakaria",
-          "lastname"=>"Benamar"
+          "firstname"=>"Benjoh",
+          "lastname"=>"Hariss"
        ]
 
     ]);
