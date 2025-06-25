@@ -27,7 +27,7 @@ class Recipe
     #[Assert\NotBlank()]
     #[Assert\Length(
     min:10,
-    max:50)]
+    max:255)]
     // #[Assert\NotEqualTo("Merde",message: "Vous ne pouvez pas utiliser le mot grossier(M****)")]
     #[InappropriateWords()] // Add the InappropriateWords constraint
     private ?string $title = null;
