@@ -43,7 +43,7 @@ class Recipe
    
     #[ORM\Column(nullable: true)]
     #[Assert\Positive()]
-    #[Assert\LessThan()]
+    #[Assert\LessThan(300)]
     private ?int $duration = null;
 
     #[ORM\Column(length: 500, nullable: true)]
