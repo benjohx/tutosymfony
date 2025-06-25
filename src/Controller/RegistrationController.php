@@ -27,6 +27,8 @@ class RegistrationController extends AbstractController
     public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, EntityManagerInterface $entityManager): Response
     {
         $user = new User();
+        
+        
         $form = $this->createForm(RegistrationFormType::class, $user);
         $form->handleRequest($request);
 
@@ -35,9 +37,10 @@ class RegistrationController extends AbstractController
             $plainPassword = $form->get('plainPassword')->getData();
 
             // encode the plain password
-            $user->setPassword($userPasswordHasher->hashPassword($user, $plainPassword));
-            $user->setCreatedAt(new DateTimeImmutable())
+            $user->setPassword($userPasswordHasher->hashPassword($user, $plainPassword))
+                 ->setCreatedAt(new DateTimeImmutable())
                  ->setUpdatedAt(new DateTimeImmutable());
+
             $entityManager->persist($user);
             $entityManager->flush();
 
@@ -79,6 +82,6 @@ class RegistrationController extends AbstractController
         // @TODO Change the redirect on success and handle or remove the flash message in your templates
         $this->addFlash('success', 'Your email address has been verified.');
 
-        return $this->redirectToRoute('app_recipe_index');
+        return $this->redirectToRoute('app_register');
     }
 }

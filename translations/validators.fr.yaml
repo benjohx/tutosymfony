@@ -148,6 +148,4 @@ Error: Erreur
 'Please select a valid option.': 'Veuillez sélectionner une option valide.'
 'Please select a valid range.': 'Veuillez sélectionner une plage valide.'
 'Please enter a valid week.': 'Veuillez entrer une semaine valide.'
-'You should agree to our terms.': '__You should agree to our terms.'
-'Please enter a password': '__Please enter a password'
-'Your password should be at least {{ limit }} characters': '__Your password should be at least {{ limit }} characters'
+'There is already an account with this email': '__There is already an account with this email'

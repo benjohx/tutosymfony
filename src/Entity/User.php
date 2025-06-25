@@ -13,10 +13,9 @@ use Symfony\Component\Validator\Constraints as Assert;
 use App\Entity\Traits\Timestampable;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
-#[ORM\Table(name: "users", uniqueConstraints: [
-    new ORM\UniqueConstraint(name: 'UNIQ_IDENTIFIER_EMAIL', columns: ['email'])
-])]
-#[UniqueEntity(fields: ['email'])]
+#[ORM\UniqueConstraint(name: 'UNIQ_IDENTIFIER_EMAIL', fields: ['email'])]
+#[ORM\Table(name:"users")]
+#[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     use Timestampable;
@@ -174,17 +173,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
             }
         }
 
-        return $this;
-    }
-
-    public function isVerified(): bool
-    {
-        return $this->isVerified;
-    }
-
-    public function setIsVerified(bool $isVerified): static
-    {
-        $this->isVerified = $isVerified;
         return $this;
     }
 }

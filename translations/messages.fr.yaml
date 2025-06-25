@@ -10,5 +10,13 @@ navBar.login: 'Se connecter'
 navBar.addRecipe: 'Ajouter une Recette'
 navBar.account: 'Mon compte'
 navBar.logout: 'Se Déconnecter'
-registerTemplate.title: __registerTemplate.title
-registerTemlpate.button: __registerTemlpate.button
+
+
+registrationForm:
+  firstname: Prénom
+  lastname: Nom
+  email: Email
+  password: 'Mot de Passe'
+  agreeTerms: "J'accepte les termes et conditions"
+
+enregisterTempletButton: "S'enregistrer"
