@@ -1,22 +1,14 @@
-# Title:	"Titre"
-# Content: "Contenu"
-# Image name: "Image de la recette"	
-# Duration: "Durée"	
-# Save: "Enregistrer"
-recipeForm:
-  title: "Titre"
-  content: "Contenu"
-  imageName: "Image de la recette"
-  duration: "Durée"
-  save: "Enregistrer"
-
-
-navBar:
-  home:	"Accueil"
-  recipes: "Liste de Recettes"
-  singUp	: "S'Enregistrer"
-  login: "Se connecter"
-  addRecipe: "Ajouter une Recette"
-  account: "Mon compte"
-  logout: "Se Déconnecter"
-
+recipeForm.title: Titre
+recipeForm.content: Contenu
+recipeForm.imageName: 'Image de la recette'
+recipeForm.duration: Durée
+recipeForm.save: Enregistrer
+navBar.home: Accueil
+navBar.recipes: 'Liste de Recettes'
+navBar.singUp: "S'Enregistrer"
+navBar.login: 'Se connecter'
+navBar.addRecipe: 'Ajouter une Recette'
+navBar.account: 'Mon compte'
+navBar.logout: 'Se Déconnecter'
+registerTemplate.title: __registerTemplate.title
+registerTemlpate.button: __registerTemlpate.button
