@@ -37,7 +37,7 @@ class Recipe
 
     #[ORM\Column(type: Types::TEXT)]
     #[Assert\NotBlank()]
-    #[Assert\Length()]
+    #[Assert\Length(min: 10, max: 1000)]
     private ?string $content = null;
     use Timestampable;
    
